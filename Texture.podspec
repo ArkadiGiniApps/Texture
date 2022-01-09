@@ -15,21 +15,21 @@ Pod::Spec.new do |spec|
     
     #
     # ==================================================================================================================
-    spec.name                 = 'PNDTexture'
-    spec.version              = '1.0.0'
-    spec.summary              = 'A Pendo wrapper to the Texture pod, used to change the namespace.'
-    spec.description          = <<-DESC
+    spec.name                  = 'PNDTexture'
+    spec.version               = '1.0.0'
+    spec.summary               = 'A Pendo wrapper to the Texture pod, used to change the namespace.'
+    spec.description           = <<-DESC
     A Pendo wrapper to the Texture pod, used to change the namespace.
     DESC
-    spec.authors              = { 'Pendo.io' => 'pendo-ios@pendo.io' }
-    spec.documentation_url    = 'https://support.pendo.io/hc/en-us/articles/360032178071-Mobile-SDK-v2-Getting-Started'
-    spec.homepage             = 'https://www.pendo.io/'
-    spec.license              = { :type => 'Commercial', :text => 'https://www.pendo.io/legal/license-terms-and-conditions-may-2020/' }
-    spec.source               = { :git => 'https://github.com/TextureGroup/Texture.git', :tag => spec.version.to_s }
-    spec.module_name          = 'AsyncDisplayKit'
-    spec.header_dir           = 'AsyncDisplayKit'
+    spec.authors               = { 'Pendo.io' => 'pendo-ios@pendo.io' }
+    spec.documentation_url     = 'https://support.pendo.io/hc/en-us/articles/360032178071-Mobile-SDK-v2-Getting-Started'
+    spec.homepage              = 'https://www.pendo.io/'
+    spec.license               = { :type => 'Commercial', :text => 'https://www.pendo.io/legal/license-terms-and-conditions-may-2020/' }
+    spec.source                = { :git => 'https://github.com/TextureGroup/Texture.git', :tag => spec.version.to_s }
+    spec.module_name           = 'AsyncDisplayKit'
+    spec.header_dir            = 'AsyncDisplayKit'
     spec.ios.deployment_target = '9.0'
-    
+    spec.swift_version         = '5.0'
     # Subspecs
     # ==================================================================================================================
     spec.subspec 'Core' do |core|
@@ -120,7 +120,6 @@ Pod::Spec.new do |spec|
         ]
         wrapper.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>', '#import <AsyncDisplayKit/PNDTexture+Namespace.h>'
         wrapper.preserve_paths       = ['Scripts']
-        # wrapper.user_target_xcconfig = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) __PENDO_NAMESPACE_PREFIX_=PND' }
         wrapper.pod_target_xcconfig  = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) __PENDO_NAMESPACE_PREFIX_=PND' }
         wrapper.dependency 'Core'
     end
