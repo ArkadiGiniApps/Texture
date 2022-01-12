@@ -533,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gini-apps.ExampleProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				__PENDO_NAMESPACE_PREFIX_ = PND;
 			};
 			name = Debug;
 		};
@@ -551,6 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gini-apps.ExampleProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				__PENDO_NAMESPACE_PREFIX_ = PND;
 			};
 			name = Release;
 		};

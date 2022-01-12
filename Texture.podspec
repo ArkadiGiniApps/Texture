@@ -120,6 +120,7 @@ Pod::Spec.new do |spec|
         ]
         wrapper.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>', '#import <AsyncDisplayKit/PNDTexture+Namespace.h>'
         wrapper.preserve_paths       = ['Scripts']
+        wrapper.user_target_xcconfig  = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) __PENDO_NAMESPACE_PREFIX_=PND' }
         wrapper.pod_target_xcconfig  = {'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) __PENDO_NAMESPACE_PREFIX_=PND' }
         wrapper.dependency 'PNDTexture/Core'
     end
